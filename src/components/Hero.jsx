@@ -2,7 +2,7 @@ import React from 'react';
 import SingleCoin from './SingleCoin';
 function Hero() {
   return (
-    <div className="Hero-container flex gap-2 h-2/5 m-4 flex-row">
+    <div className="Hero-container flex gap-2 h-2/5 m-4 flex-row text-center">
       <div className="hero-left rounded-lg bg-blue-200 w-3/4 h-full">
         <SingleCoin></SingleCoin>
         <div className="hero-left-bottom m-2 gap-2 flex justify-evenly h-3/4">
