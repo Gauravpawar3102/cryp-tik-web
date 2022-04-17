@@ -1,9 +1,9 @@
 import React from 'react';
 import { BiSearchAlt } from 'react-icons/bi';
-import DataModal from './DataModal';
 import SingleCoin from './SingleCoin';
 
-function CoinList() {
+function CoinList({ data }) {
+  console.log();
   return (
     <div className="coinlist-container h-full">
       <div className="search-bar flex items-center justify-center m-4">
@@ -24,12 +24,14 @@ function CoinList() {
           <div className="24Hr bg-gray-200 px-2 m-2 ">24Hr</div>
           <div className="Market-Cap bg-gray-200 px-2 m-2 ">Market Cap</div>
         </div>
-
-        <SingleCoin>
-          <div className="component-market-cap">$1,87,654,000</div>
-        </SingleCoin>
+        {data.map((dataa) => {
+          return (
+            <SingleCoin data={dataa} key={dataa.id}>
+              <div className="component-market-cap">{dataa.market_cap}</div>
+            </SingleCoin>
+          );
+        })}
       </div>
-      <DataModal></DataModal>
     </div>
   );
 }
