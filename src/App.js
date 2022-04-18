@@ -6,6 +6,7 @@ import axios from 'axios';
 
 function App() {
   const [data, setData] = useState([]);
+  const [search, setSearch] = useState('');
 
   useEffect(() => {
     fetchData();
@@ -20,13 +21,26 @@ function App() {
         let result = res.data;
         setData(result);
         // console.log(result);
+      })
+      .catch((error) => {
+        console.log(error);
       });
   }
+  const handleChange = (e) => {
+    setSearch(e.target.value);
+  };
+  const filteredCoins = data.filter((dataa) =>
+    dataa.name.toLowerCase().includes(search.toLowerCase())
+  );
 
   return (
     <div className="App h-full">
       <Hero data={data}></Hero>
-      <CoinList data={data}></CoinList>
+      <CoinList
+        handleChange={handleChange}
+        filteredCoins={filteredCoins}
+        data={data}
+      ></CoinList>
     </div>
   );
 }

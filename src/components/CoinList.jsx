@@ -2,7 +2,7 @@ import React from 'react';
 import { BiSearchAlt } from 'react-icons/bi';
 import SingleCoin from './SingleCoin';
 
-function CoinList({ data }) {
+function CoinList({ data, handleChange, filteredCoins }) {
   console.log();
   return (
     <div className="coinlist-container h-full">
@@ -11,6 +11,7 @@ function CoinList({ data }) {
           type="text"
           className="text-black placeholder-black p-2 bg-red-300 "
           placeholder="Search..."
+          onChange={handleChange}
         />
         <div className="search-coinList ">
           <BiSearchAlt className="bg-blue-300 text-2xl"></BiSearchAlt>
@@ -24,10 +25,12 @@ function CoinList({ data }) {
           <div className="24Hr bg-gray-200 px-2 m-2 ">24Hr</div>
           <div className="Market-Cap bg-gray-200 px-2 m-2 ">Market Cap</div>
         </div>
-        {data.map((dataa) => {
+        {filteredCoins.map((dataa) => {
           return (
             <SingleCoin data={dataa} key={dataa.id}>
-              <div className="component-market-cap">{dataa.market_cap}</div>
+              <div className="component-market-cap">
+                {dataa.market_cap.toLocaleString()}
+              </div>
             </SingleCoin>
           );
         })}
