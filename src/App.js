@@ -6,6 +6,7 @@ import axios from 'axios';
 
 function App() {
   const [data, setData] = useState([]);
+  const [heroData, setHeroData] = useState([]);
   const [search, setSearch] = useState('');
 
   useEffect(() => {
@@ -19,7 +20,9 @@ function App() {
       )
       .then((res) => {
         let result = res.data;
+        let heroResult = res.data[0];
         setData(result);
+        setHeroData(heroResult);
         // console.log(result);
       })
       .catch((error) => {
@@ -35,11 +38,11 @@ function App() {
 
   return (
     <div className="App h-full">
-      <Hero data={data}></Hero>
+      <Hero data={heroData}></Hero>
       <CoinList
         handleChange={handleChange}
         filteredCoins={filteredCoins}
-        data={data}
+        data={heroData}
       ></CoinList>
     </div>
   );

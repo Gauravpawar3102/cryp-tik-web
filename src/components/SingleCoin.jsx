@@ -4,7 +4,7 @@ import { TiArrowSortedUp, TiArrowSortedDown } from 'react-icons/ti';
 function SingleCoin({ children, data }) {
   // console.log(data);
   return (
-    <div className="hero-left-top text-2xl bg-white m-2 flex items-center justify-between  ">
+    <div className="hero-left-top text-2xl bg-white m-2 flex items-center justify-between p-2 ">
       <div className="hero-coin p-4 gap-8 w-1/3   items-center flex justify-start ">
         <img className="h-8 w-8" src={data.image} alt="img" />
         <div className="hero-coin-name ">{data.name}</div>
