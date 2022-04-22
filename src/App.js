@@ -3,6 +3,7 @@ import CoinList from './components/CoinList';
 import Hero from './components/Hero';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import ChartData from './components/ChartData';
 
 function App() {
   const [data, setData] = useState([]);
@@ -37,13 +38,14 @@ function App() {
   );
 
   return (
-    <div className="App h-full">
+    <div className="App h-full w-screen">
       <Hero data={heroData}></Hero>
-      <CoinList
+      <ChartData />
+      {/* <CoinList
         handleChange={handleChange}
         filteredCoins={filteredCoins}
         data={heroData}
-      ></CoinList>
+      ></CoinList> */}
     </div>
   );
 }
