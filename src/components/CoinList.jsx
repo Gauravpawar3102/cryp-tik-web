@@ -3,6 +3,7 @@ import { BiSearchAlt } from 'react-icons/bi';
 import SingleCoin from './SingleCoin';
 
 function CoinList({ data, handleChange, filteredCoins, handleClick }) {
+  console.log(data.id);
   return (
     <div className="coinlist-container h-full">
       <div className="search-bar flex items-center justify-center m-4">
@@ -13,6 +14,9 @@ function CoinList({ data, handleChange, filteredCoins, handleClick }) {
           onChange={handleChange}
           onKeyPress={(e) => e.key === 'Enter' && handleClick()}
         />
+        <datalist>
+          <option value="datt">safda</option>
+        </datalist>
         <div className="search-coinList ">
           <BiSearchAlt
             className="bg-blue-300 text-2xl"

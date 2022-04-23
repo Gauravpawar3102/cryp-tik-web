@@ -32,10 +32,10 @@ function App() {
       });
   }
   const handleChange = (e) => {
-    setSearch(e.target.value);
+    setSearch(e.target.value.toLowerCase());
   };
   const handleClick = () => {
-    setSearchChart(search);
+    setSearchChart(search.toLowerCase());
     // console.log(searchChart);
   };
   const filteredCoins = data.filter((dataa) =>
