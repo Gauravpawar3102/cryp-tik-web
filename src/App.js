@@ -9,6 +9,7 @@ function App() {
   const [data, setData] = useState([]);
   const [heroData, setHeroData] = useState([]);
   const [search, setSearch] = useState('');
+  const [searchChart, setSearchChart] = useState('bitcoin');
 
   useEffect(() => {
     fetchData();
@@ -33,6 +34,10 @@ function App() {
   const handleChange = (e) => {
     setSearch(e.target.value);
   };
+  const handleClick = () => {
+    setSearchChart(search);
+    // console.log(searchChart);
+  };
   const filteredCoins = data.filter((dataa) =>
     dataa.name.toLowerCase().includes(search.toLowerCase())
   );
@@ -40,12 +45,13 @@ function App() {
   return (
     <div className="App h-full w-screen">
       <Hero data={heroData}></Hero>
-      <ChartData />
-      {/* <CoinList
+      <ChartData coinName={searchChart} />
+      <CoinList
         handleChange={handleChange}
+        handleClick={handleClick}
         filteredCoins={filteredCoins}
         data={heroData}
-      ></CoinList> */}
+      ></CoinList>
     </div>
   );
 }
