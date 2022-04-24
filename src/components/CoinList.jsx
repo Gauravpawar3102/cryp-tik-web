@@ -24,7 +24,7 @@ function CoinList({ data, handleChange, filteredCoins, handleClick }) {
           ></BiSearchAlt>
         </div>
       </div>
-      <div className="crypto-data-list h-full bg-orange-300 ">
+      <div className="crypto-data-list h-full ">
         <div className="meta-data-ofcoin flex items-center gap-4 justify-evenly">
           <div className="Token bg-gray-200 px-2 m-2 ">Token</div>
           <div className="symbol ml-4 bg-gray-200 px-2 m-2 ">Symbol</div>
