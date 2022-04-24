@@ -44,7 +44,7 @@ function App() {
 
   return (
     <div className="App h-full w-screen">
-      <Hero data={heroData}></Hero>
+      <Hero coinName={searchChart} data={heroData}></Hero>
       <ChartData coinName={searchChart} />
       <CoinList
         handleChange={handleChange}

@@ -48,13 +48,13 @@ function ChartData({ coinName }) {
   }
   return (
     <div className="chart-container">
-      <div className="w-full text-center p-4 capitalize">{`${coinName} chart`}</div>
+      {/* <div className="w-full text-center p-4 capitalize">{`${coinName} chart`}</div> */}
       <ResponsiveContainer width="100%" aspect={3}>
         <LineChart className="bg-slate-700" data={chartjsData}>
           <XAxis dataKey="CoinPrice" />
           <YAxis />
           <Tooltip />
-          <Legend />
+          {/* <Legend /> */}
           <Line type="monotone" className=" text-white" dataKey="CoinPrice" />
         </LineChart>
       </ResponsiveContainer>
