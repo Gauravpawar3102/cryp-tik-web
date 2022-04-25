@@ -7,7 +7,7 @@ import {
   Line,
   XAxis,
   YAxis,
-  Legend,
+  // Legend,
   Tooltip,
 } from 'recharts';
 
@@ -42,7 +42,7 @@ function ChartData({ coinName }) {
       .catch((error) => {
         console.log(error);
       });
-    let dateObj = new Date();
+    // let dateObj = new Date();
     // console.log(dateObj.toLocaleDateString('en-UK'));
     // console.log(dataArr);
   }
