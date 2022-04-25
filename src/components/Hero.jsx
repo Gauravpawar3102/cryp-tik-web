@@ -7,9 +7,7 @@ function Hero({ data, coinName }) {
       <div className="hero-left rounded-lg bg-blue-600 w-3/4 h-full">
         <SingleCoin data={data}></SingleCoin>
         <div className="hero-left-bottom m-2 gap-2 flex justify-evenly h-full">
-          <div className="hlb-sec-1 h-full bg-slate-400  ">
-            <ChartData className="hlb-sec-1 h-full" coinName={coinName} />
-          </div>
+          <div className="hlb-sec-1 h-full bg-slate-300  grow">one</div>
           <div className="hlb-sec-2 h-full bg-slate-300  grow">two</div>
           <div className="hlb-sec-3 h-full bg-slate-400  grow">three</div>
         </div>
