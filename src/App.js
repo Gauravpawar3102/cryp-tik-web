@@ -44,7 +44,7 @@ function App() {
   );
 
   return (
-    <div className="App h-full w-screen">
+    <div className="App h-screen w-screen  ">
       {/* <Hero coinName={searchChart} data={heroData}></Hero>
       <ChartData coinName={searchChart} />
       <CoinList
