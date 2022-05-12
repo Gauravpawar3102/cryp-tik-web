@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import ChartData from './components/ChartData';
+import Login from './components/Login';
 
 function App() {
   const [data, setData] = useState([]);
@@ -44,14 +45,15 @@ function App() {
 
   return (
     <div className="App h-full w-screen">
-      <Hero coinName={searchChart} data={heroData}></Hero>
+      {/* <Hero coinName={searchChart} data={heroData}></Hero>
       <ChartData coinName={searchChart} />
       <CoinList
         handleChange={handleChange}
         handleClick={handleClick}
         filteredCoins={filteredCoins}
         data={heroData}
-      ></CoinList>
+      ></CoinList> */}
+      <Login></Login>
     </div>
   );
 }

@@ -3,7 +3,7 @@ import { BiSearchAlt } from 'react-icons/bi';
 import SingleCoin from './SingleCoin';
 
 function CoinList({ data, handleChange, filteredCoins, handleClick }) {
-  console.log(data.id);
+  console.log();
   return (
     <div className="coinlist-container h-full">
       <div className="search-bar flex items-center justify-center m-4">
