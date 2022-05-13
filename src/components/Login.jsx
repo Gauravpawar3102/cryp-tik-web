@@ -7,7 +7,7 @@ function Login() {
         <h1 className="login-left-heading">Log in / Sign up</h1>
         <div className="email-left">Email</div>
         <div className="password-left">password</div>
-        <div className="signin-with-google">sign in with google</div>
+        <div className="signin-with-google">sign google</div>
       </div>
       <div className="login-right-container bg-slate-200 grow w-1/2">right</div>
     </div>
